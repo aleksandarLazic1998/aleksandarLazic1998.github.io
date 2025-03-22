@@ -1,7 +1,9 @@
 import type React from "react";
 import { Inter, Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { metaSetting } from "@/const/meta.const";
 import "./globals.css";
+import { Metadata } from "next";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -14,11 +16,7 @@ const poppins = Poppins({
 	variable: "--font-poppins",
 });
 
-export const metadata = {
-	title: "Aleksandar Lazić | Software Developer",
-	description:
-		"Portfolio of Aleksandar Lazić, a Software Developer specialized in React and Node.js Ecosystem",
-};
+export const metadata: Metadata = metaSetting;
 
 export default function RootLayout({
 	children,
@@ -40,5 +38,3 @@ export default function RootLayout({
 		</html>
 	);
 }
-
-import "./globals.css";
