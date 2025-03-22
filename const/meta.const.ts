@@ -40,7 +40,7 @@ const metaSetting: Metadata = {
 	openGraph: {
 		title: og.title,
 		description: og.description,
-		// url: "https://" + window.location.origin,
+		url: "aleksandarlazic1998.github.io",
 		images: [{ url: og.image, alt: og.title }],
 		type: og.type as
 			| "website"
