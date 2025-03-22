@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 const og = {
 	title: "Aleksandar Lazić",
 	description: "Portfolio of Aleksandar Lazić.",
@@ -5,7 +7,7 @@ const og = {
 	image: "/images/cover.jpg",
 };
 
-const metaSetting = {
+const metaSetting: Metadata = {
 	title: "Aleksandar Lazić | Software Developer",
 	description:
 		"Portfolio of Aleksandar Lazić, a Software Developer specialized in React and Node.js Ecosystem",

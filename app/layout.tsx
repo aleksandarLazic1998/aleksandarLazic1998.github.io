@@ -16,7 +16,7 @@ const poppins = Poppins({
 	variable: "--font-poppins",
 });
 
-export const metadata: Metadata = metaSetting;
+export const metadata: Metadata = { ...metaSetting };
 
 export default function RootLayout({
 	children,
