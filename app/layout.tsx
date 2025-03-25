@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { metaSetting } from "@/const/meta.const";
 import "./globals.css";
 import { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					{children}
+					<SpeedInsights />
 				</ThemeProvider>
 			</body>
 		</html>
