@@ -8,6 +8,7 @@ const og = {
 };
 
 const metaSetting: Metadata = {
+	metadataBase: new URL("https://aleksandarlazic1998.github.io/"),
 	title: "Aleksandar Lazić | Software Developer",
 	description:
 		"Portfolio of Aleksandar Lazić, a Software Developer specialized in React and Node.js Ecosystem",

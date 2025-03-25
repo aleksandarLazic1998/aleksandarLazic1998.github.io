@@ -111,11 +111,44 @@ body {
   }
 }
 
+@keyframes fast-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes normal-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fast-spin {
+  animation: fast-spin 10s linear infinite;
+}
+
+
+
 .animate-slow-spin {
   animation: slow-spin 30s linear infinite;
 }
 
 .animate-reverse-spin {
   animation: reverse-spin 20s linear infinite;
+}
+
+.animate-normal-spin {
+  animation: normal-spin 30s linear infinite;
+}
+
+
+.devicon-devicon-plain {
+  max-width: 2em;
 }
 
