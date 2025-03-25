@@ -35,31 +35,30 @@ export function Contact() {
 		setFormData((prev) => ({ ...prev, [name]: value }));
 	};
 
-	// const handleSubmit = async (e: FormEvent) => {
-	// 	e.preventDefault();
-	// 	setIsSubmitting(true);
-
-	// 	try {
-	// 		// setFormData({ name: "", email: "", subject: "", message: "" });
-	// 		const response = await fetch("/api/send", {
-	// 			headers: {
-	// 				accept: "application/json",
-	// 				"content-type": "application/json", // Change this
-	// 			},
-	// 			body: JSON.stringify({
-	// 				name: "Aleksandar Lazic",
-	// 				email: "aleksandar.lazic.d@gmail.com",
-	// 				subject: "THIS IS MY SUBJECT",
-	// 				message: "ghisuafgil;uahf;lashhfahs;f",
-	// 			}),
-	// 			method: "POST",
-	// 		});
-	// 		setIsSubmitting(false);
-	// 		setSubmitSuccess(true);
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// };
+	const handleSubmit = async (e: FormEvent) => {
+		// e.preventDefault();
+		// setIsSubmitting(true);
+		// try {
+		// 	// setFormData({ name: "", email: "", subject: "", message: "" });
+		// 	const response = await fetch("/api/send", {
+		// 		headers: {
+		// 			accept: "application/json",
+		// 			"content-type": "application/json", // Change this
+		// 		},
+		// 		body: JSON.stringify({
+		// 			name: "Aleksandar Lazic",
+		// 			email: "aleksandar.lazic.d@gmail.com",
+		// 			subject: "THIS IS MY SUBJECT",
+		// 			message: "ghisuafgil;uahf;lashhfahs;f",
+		// 		}),
+		// 		method: "POST",
+		// 	});
+		// 	setIsSubmitting(false);
+		// 	setSubmitSuccess(true);
+		// } catch (error) {
+		// 	console.log(error);
+		// }
+	};
 
 	return (
 		<section id="contact" className="py-20 bg-gray-900/50">
