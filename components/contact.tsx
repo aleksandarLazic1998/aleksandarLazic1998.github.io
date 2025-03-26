@@ -46,10 +46,10 @@ export function Contact() {
 		// 			"content-type": "application/json", // Change this
 		// 		},
 		// 		body: JSON.stringify({
-		// 			name: "Aleksandar Lazic",
-		// 			email: "aleksandar.lazic.d@gmail.com",
-		// 			subject: "THIS IS MY SUBJECT",
-		// 			message: "ghisuafgil;uahf;lashhfahs;f",
+		// 			name: formData.name,
+		// 			email: formData.email,
+		// 			subject: formData.subject,
+		// 			message: formData.message,
 		// 		}),
 		// 		method: "POST",
 		// 	});

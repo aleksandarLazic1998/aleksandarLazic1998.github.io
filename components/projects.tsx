@@ -22,6 +22,8 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { ExternalLink, Github, Maximize2 } from "lucide-react";
+import Link from "next/link";
+import { ScrollArea } from "./ui/scroll-area";
 
 export function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
@@ -31,39 +33,67 @@ export function Projects() {
 			id: 1,
 			title: "Benefiti",
 			description: "HR platform for employee benefits management",
-			image: "https://placehold.co/600x400",
+			image:
+				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/benefiti.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9iZW5lZml0aS5wbmciLCJpYXQiOjE3NDI5OTUzNjMsImV4cCI6MjA1ODM1NTM2M30.wTrh3zQo_pK7PnvumUz4X04G7p76hkF2Rnez25UCuYw",
+			image2:
+				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/benefiti-2.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9iZW5lZml0aS0yLnBuZyIsImlhdCI6MTc0Mjk5NjI3MSwiZXhwIjoyMTIxNDI4MjcxfQ.Rbe9Dx_ygsLHR2pQfj9o4HcFucedko5zj8javL1Vh1s",
 			category: ["all", "frontend", "backend"],
 			technologies: [
+				"JavaScript",
+				"TypeScript",
 				"React",
 				"Next.js",
-				"TypeScript",
+				"Redux",
+				"Redux Thunk",
+				"Sass",
+				"CSS",
+				"Shadcn",
 				"Node.js",
 				"Express",
 				"PostgreSQL",
+				"Redis",
+				"Nest.js",
+				"Docker",
+				"Supabase",
+				"Digital Ocean",
+				"PM2",
+				"NGNIX",
 			],
-			role: "Lead Developer",
-			details:
-				"Led the project as a lead developer. Refactored legacy code to improve maintainability and performance. Optimized back-end code, increasing speed by approximately 50%. Reengineered key React patterns to enhance performance and streamline code efficiency.",
-			link: "#",
+			role: "Lead Full Stack Developer",
+			details: [
+				"Led the project as a lead Full-Stack developer.",
+				"Refactored legacy code to improve maintainability and performance.",
+				"Optimized back-end code, increasing speed by approximately 50%.",
+				"Reengineered key React patterns to enhance performance and streamline code efficiency.",
+			],
+			link: "https://benefiti.rs/",
 			github: null,
 		},
 		{
 			id: 2,
 			title: "CMMC+",
 			description: "Security compliance management platform",
-			image: "https://placehold.co/600x400",
+			image:
+				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/cmmc.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9jbW1jLndlYnAiLCJpYXQiOjE3NDI5OTU0MjAsImV4cCI6MjEyMTQyNzQyMH0.u8p1-6MXMKH8cvjdYnjhhmXSI6X3Hfbjh6RjUtOQlyw",
+			image2:
+				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/cmmc.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9jbW1jLndlYnAiLCJpYXQiOjE3NDI5OTU0MjAsImV4cCI6MjEyMTQyNzQyMH0.u8p1-6MXMKH8cvjdYnjhhmXSI6X3Hfbjh6RjUtOQlyw",
+
 			category: ["all", "frontend"],
 			technologies: [
+				"JavaScript",
 				"React",
 				"Redux",
-				"JavaScript",
 				"Redux Saga",
+				"React Context",
 				"Bootstrap",
 				"Sass",
 			],
-			role: "Frontend Developer",
-			details:
-				"Revamped legacy systems by introducing code improvements and feature enhancements while ensuring seamless collaboration across teams. Debugged and fine-tuned applications to maintain optimal performance and user experience.",
+			role: "Frontend (React.js) Developer",
+			details: [
+				"Leading Frontend Developer in refactoring and optimizing performances.",
+				"Revamped legacy systems by introducing code improvements and feature enhancements while ensuring seamless collaboration across teams.",
+				"Debugged and fine-tuned applications to maintain optimal performance and user experience.",
+			],
 			link: "#",
 			github: null,
 		},
@@ -71,7 +101,11 @@ export function Projects() {
 			id: 3,
 			title: "eProtokol",
 			description: "Digital protocol system for organizations",
-			image: "https://placehold.co/600x400",
+			image:
+				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/e-protokol.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9lLXByb3Rva29sLnBuZyIsImlhdCI6MTc0Mjk5NTQ0MywiZXhwIjoyMTIxNDI3NDQzfQ.rCNLg0VqRq9wvDEY0JVExmYKuSSYS9O5cLgdgvtO8kY",
+			image2:
+				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/e-protokol.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9lLXByb3Rva29sLnBuZyIsImlhdCI6MTc0Mjk5NTQ0MywiZXhwIjoyMTIxNDI3NDQzfQ.rCNLg0VqRq9wvDEY0JVExmYKuSSYS9O5cLgdgvtO8kY",
+
 			category: ["all", "frontend"],
 			technologies: [
 				"React",
@@ -81,10 +115,13 @@ export function Projects() {
 				"Bootstrap",
 				"Sass",
 			],
-			role: "Frontend Developer",
-			details:
-				"Modernized legacy systems by enhancing code quality, introducing new features, and fostering seamless team collaboration. Diagnosed and resolved application issues to ensure peak performance and a smooth user experience.",
-			link: "#",
+			role: "Frontend (React.js) Developer",
+			details: [
+				"Leading Frontend Developer.",
+				"Modernized legacy systems by enhancing code quality, introducing new features, and fostering seamless team collaboration.",
+				"Diagnosed and resolved application issues to ensure peak performance and a smooth user experience.",
+			],
+			link: "https://www.eprotokol.rs/",
 			github: null,
 		},
 	];
@@ -213,7 +250,7 @@ export function Projects() {
 												<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
 													<div className="relative h-[300px] rounded-lg overflow-hidden">
 														<Image
-															src={project.image || "/placeholder.svg"}
+															src={project.image2 || "/placeholder.svg"}
 															alt={`${project.title} project screenshot`}
 															fill
 															className="object-cover"
@@ -226,11 +263,21 @@ export function Projects() {
 														<h4 className="text-lg font-semibold mb-2">
 															Details
 														</h4>
-														<p className="text-gray-300 mb-4">
-															{project.details}
-														</p>
 
-														<h4 className="text-lg font-semibold mb-2">
+														<section className="rounded-md border w-full h-64 overflow-y-auto p-2">
+															{project.details.map((detail) => {
+																return (
+																	<li
+																		key={detail}
+																		className="text-gray-300 mb-4 list-disc"
+																	>
+																		{detail}
+																	</li>
+																);
+															})}
+														</section>
+
+														<h4 className="text-lg font-semibold mb-2 mt-4">
 															Technologies
 														</h4>
 														<ul
@@ -249,18 +296,20 @@ export function Projects() {
 															))}
 														</ul>
 
-														<div className="flex gap-4">
+														<div className="flex gap-4 justify-end">
 															{project.link && (
-																<Button
-																	className="bg-gradient-to-r from-purple-500 to-teal-400 text-white"
+																<Link
+																	className="bg-gradient-to-r from-purple-500 to-teal-400 text-white flex items-center p-4 rounded-lg"
 																	aria-label={`Visit ${project.title} website`}
+																	href={project.link}
+																	target="_blank"
 																>
 																	Visit Site
 																	<ExternalLink
 																		className="ml-2 h-4 w-4"
 																		aria-hidden="true"
 																	/>
-																</Button>
+																</Link>
 															)}
 															{project.github && (
 																<Button
@@ -315,18 +364,18 @@ export function Projects() {
 											{project.role}
 										</span>
 										{project.link && (
-											<Button
-												variant="ghost"
-												size="sm"
-												className="text-purple-400 hover:text-purple-300 p-0"
+											<Link
+												className="text-purple-400 hover:text-purple-300 p-0 flex items-center"
 												aria-label={`View ${project.title} project`}
+												href={project.link}
+												target="_blank"
 											>
 												View Project
 												<ExternalLink
 													className="ml-2 h-4 w-4"
 													aria-hidden="true"
 												/>
-											</Button>
+											</Link>
 										)}
 									</div>
 								</CardFooter>

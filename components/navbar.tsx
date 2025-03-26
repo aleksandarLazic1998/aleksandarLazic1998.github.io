@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import supabase from "@/lib/download-supabase";
+import PortfolioIcon from "./icon";
 
 export function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
@@ -27,6 +29,32 @@ export function Navbar() {
 		{ name: "Contact", href: "#contact" },
 	];
 
+	const handleDownload = async () => {
+		try {
+			const { data, error } = await supabase.storage
+				.from("perosnal-data")
+				.download("Images/aleksandar_lazic_cv.pdf");
+
+			if (error) {
+				console.error("Error downloading file:", error.message);
+				return;
+			}
+
+			const url = window.URL.createObjectURL(data);
+
+			const a = document.createElement("a");
+			a.href = url;
+			a.download = "Aleksandar Lazic CV.pdf";
+			document.body.appendChild(a);
+			a.click();
+
+			window.URL.revokeObjectURL(url);
+			document.body.removeChild(a);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<motion.header
 			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -40,8 +68,7 @@ export function Navbar() {
 		>
 			<div className="container flex items-center justify-between">
 				<Link href="/" className="text-2xl font-bold text-white">
-					<span className="text-purple-500">A</span>
-					<span className="text-teal-400">L</span>
+					<PortfolioIcon />
 				</Link>
 
 				<nav className="hidden md:flex items-center space-x-8">
@@ -55,7 +82,10 @@ export function Navbar() {
 							<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-teal-400 transition-all duration-300 group-hover:w-full"></span>
 						</Link>
 					))}
-					<Button className="bg-gradient-to-r from-purple-500 to-teal-400 text-white hover:from-purple-600 hover:to-teal-500 transition-all duration-300">
+					<Button
+						onClick={handleDownload}
+						className="bg-gradient-to-r from-purple-500 to-teal-400 text-white hover:from-purple-600 hover:to-teal-500 transition-all duration-300"
+					>
 						Resume
 					</Button>
 				</nav>
@@ -85,7 +115,10 @@ export function Navbar() {
 										{item.name}
 									</Link>
 								))}
-								<Button className="bg-gradient-to-r from-purple-500 to-teal-400 text-white hover:from-purple-600 hover:to-teal-500 transition-all duration-300 mt-4">
+								<Button
+									onClick={handleDownload}
+									className="bg-gradient-to-r from-purple-500 to-teal-400 text-white hover:from-purple-600 hover:to-teal-500 transition-all duration-300 mt-4"
+								>
 									Resume
 								</Button>
 							</nav>
