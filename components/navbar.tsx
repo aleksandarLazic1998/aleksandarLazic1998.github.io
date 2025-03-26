@@ -99,12 +99,6 @@ export function Navbar() {
 					</SheetTrigger>
 					<SheetContent side="right" className="bg-gray-900 border-gray-800">
 						<div className="flex flex-col h-full">
-							<div className="flex justify-end">
-								<Button variant="ghost" size="icon" className="text-white">
-									<X className="h-6 w-6" />
-									<span className="sr-only">Close menu</span>
-								</Button>
-							</div>
 							<nav className="flex flex-col space-y-6 mt-10">
 								{navItems.map((item) => (
 									<Link

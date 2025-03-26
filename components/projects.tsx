@@ -238,7 +238,7 @@ export function Projects() {
 													<Maximize2 className="h-5 w-5" aria-hidden="true" />
 												</Button>
 											</DialogTrigger>
-											<DialogContent className="bg-gray-900 border border-gray-800 text-white max-w-3xl">
+											<DialogContent className="modal-sm overflow-y-auto bg-gray-900 border border-gray-800 text-white max-w-3xl">
 												<DialogHeader>
 													<DialogTitle className="text-2xl">
 														{project.title}
