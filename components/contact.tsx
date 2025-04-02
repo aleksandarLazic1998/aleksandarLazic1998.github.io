@@ -36,28 +36,28 @@ export function Contact() {
 	};
 
 	const handleSubmit = async (e: FormEvent) => {
-		// e.preventDefault();
-		// setIsSubmitting(true);
-		// try {
-		// 	// setFormData({ name: "", email: "", subject: "", message: "" });
-		// 	const response = await fetch("/api/send", {
-		// 		headers: {
-		// 			accept: "application/json",
-		// 			"content-type": "application/json", // Change this
-		// 		},
-		// 		body: JSON.stringify({
-		// 			name: formData.name,
-		// 			email: formData.email,
-		// 			subject: formData.subject,
-		// 			message: formData.message,
-		// 		}),
-		// 		method: "POST",
-		// 	});
-		// 	setIsSubmitting(false);
-		// 	setSubmitSuccess(true);
-		// } catch (error) {
-		// 	console.log(error);
-		// }
+		e.preventDefault();
+		setIsSubmitting(true);
+		try {
+			// setFormData({ name: "", email: "", subject: "", message: "" });
+			const response = await fetch("/api/send", {
+				headers: {
+					accept: "application/json",
+					"content-type": "application/json",
+				},
+				body: JSON.stringify({
+					name: formData.name,
+					email: formData.email,
+					subject: formData.subject,
+					message: formData.message,
+				}),
+				method: "POST",
+			});
+			setIsSubmitting(false);
+			setSubmitSuccess(true);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	return (

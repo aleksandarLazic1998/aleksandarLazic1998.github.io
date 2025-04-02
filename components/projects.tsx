@@ -25,6 +25,13 @@ import { ExternalLink, Github, Maximize2 } from "lucide-react";
 import Link from "next/link";
 import { ScrollArea } from "./ui/scroll-area";
 
+import benefitiLogo1 from "../public/benefiti-logo-1.png";
+import benefitiLogo2 from "../public/benefiti-logo-2.png";
+import cmmcLogo1 from "../public/cmmc-logo-1.png";
+import cmmcLogo2 from "../public/cmmc-logo-2.png";
+import eprotokolLogo1 from "../public/e-protokol-1.png";
+import eprotokolLogo2 from "../public/e-protokol-2.png";
+
 export function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
 
@@ -33,10 +40,8 @@ export function Projects() {
 			id: 1,
 			title: "Benefiti",
 			description: "HR platform for employee benefits management",
-			image:
-				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/benefiti.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9iZW5lZml0aS5wbmciLCJpYXQiOjE3NDI5OTUzNjMsImV4cCI6MjA1ODM1NTM2M30.wTrh3zQo_pK7PnvumUz4X04G7p76hkF2Rnez25UCuYw",
-			image2:
-				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/benefiti-2.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9iZW5lZml0aS0yLnBuZyIsImlhdCI6MTc0Mjk5NjI3MSwiZXhwIjoyMTIxNDI4MjcxfQ.Rbe9Dx_ygsLHR2pQfj9o4HcFucedko5zj8javL1Vh1s",
+			image: benefitiLogo1,
+			image2: benefitiLogo2,
 			category: ["all", "frontend", "backend"],
 			technologies: [
 				"JavaScript",
@@ -73,11 +78,8 @@ export function Projects() {
 			id: 2,
 			title: "CMMC+",
 			description: "Security compliance management platform",
-			image:
-				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/cmmc.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9jbW1jLndlYnAiLCJpYXQiOjE3NDI5OTU0MjAsImV4cCI6MjEyMTQyNzQyMH0.u8p1-6MXMKH8cvjdYnjhhmXSI6X3Hfbjh6RjUtOQlyw",
-			image2:
-				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/cmmc.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9jbW1jLndlYnAiLCJpYXQiOjE3NDI5OTU0MjAsImV4cCI6MjEyMTQyNzQyMH0.u8p1-6MXMKH8cvjdYnjhhmXSI6X3Hfbjh6RjUtOQlyw",
-
+			image: cmmcLogo1,
+			image2: cmmcLogo2,
 			category: ["all", "frontend"],
 			technologies: [
 				"JavaScript",
@@ -101,11 +103,8 @@ export function Projects() {
 			id: 3,
 			title: "eProtokol",
 			description: "Digital protocol system for organizations",
-			image:
-				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/e-protokol.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9lLXByb3Rva29sLnBuZyIsImlhdCI6MTc0Mjk5NTQ0MywiZXhwIjoyMTIxNDI3NDQzfQ.rCNLg0VqRq9wvDEY0JVExmYKuSSYS9O5cLgdgvtO8kY",
-			image2:
-				"https://galkdgmmssndxwgaehow.supabase.co/storage/v1/object/sign/perosnal-data/Images/e-protokol.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZXJvc25hbC1kYXRhL0ltYWdlcy9lLXByb3Rva29sLnBuZyIsImlhdCI6MTc0Mjk5NTQ0MywiZXhwIjoyMTIxNDI3NDQzfQ.rCNLg0VqRq9wvDEY0JVExmYKuSSYS9O5cLgdgvtO8kY",
-
+			image: eprotokolLogo1,
+			image2: eprotokolLogo2,
 			category: ["all", "frontend"],
 			technologies: [
 				"React",
@@ -215,7 +214,7 @@ export function Projects() {
 										src={project.image || "/placeholder.svg"}
 										alt={`${project.title} project thumbnail`}
 										fill
-										className="object-cover transition-transform duration-500 hover:scale-110"
+										className="object-fill transition-transform duration-500 hover:scale-110"
 									/>
 									<div
 										className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"
@@ -253,7 +252,7 @@ export function Projects() {
 															src={project.image2 || "/placeholder.svg"}
 															alt={`${project.title} project screenshot`}
 															fill
-															className="object-cover"
+															className="object-contain"
 														/>
 													</div>
 													<div>
