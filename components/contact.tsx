@@ -40,19 +40,19 @@ export function Contact() {
 		setIsSubmitting(true);
 		try {
 			// setFormData({ name: "", email: "", subject: "", message: "" });
-			const response = await fetch("/api/send", {
-				headers: {
-					accept: "application/json",
-					"content-type": "application/json",
-				},
-				body: JSON.stringify({
-					name: formData.name,
-					email: formData.email,
-					subject: formData.subject,
-					message: formData.message,
-				}),
-				method: "POST",
-			});
+
+			const emailTo = "aleksandar.lazic.d@gmail.com";
+
+			const sendEmail = `mailto:${emailTo}?subject=${encodeURIComponent(
+				formData.subject
+			)}&body=${encodeURIComponent(formData.message)}`;
+
+			if (typeof window !== "undefined") {
+				console.log(sendEmail);
+				// Redirect to the mailto link
+				window.location.href = sendEmail;
+			}
+
 			setIsSubmitting(false);
 			setSubmitSuccess(true);
 		} catch (error) {
@@ -85,7 +85,7 @@ export function Contact() {
 					</p>
 				</motion.div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<div className="flex justify-center gap-12">
 					<motion.div
 						initial={{ opacity: 0, x: -30 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -205,7 +205,7 @@ export function Contact() {
 						</Card>
 					</motion.div>
 
-					<motion.div
+					{/* <motion.div
 						initial={{ opacity: 0, x: 30 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
@@ -358,7 +358,7 @@ export function Contact() {
 								</form>
 							</CardContent>
 						</Card>
-					</motion.div>
+					</motion.div> */}
 				</div>
 			</div>
 		</section>
