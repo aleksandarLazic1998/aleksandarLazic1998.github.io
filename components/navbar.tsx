@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
-import supabase from "@/lib/download-supabase";
 import PortfolioIcon from "./icon";
 
 export function Navbar() {
@@ -22,27 +21,17 @@ export function Navbar() {
 
 	const handleDownload = async () => {
 		try {
-			const { data, error } = await supabase.storage
-				.from("perosnal-data")
-				.download("Images/aleksandar_lazic_cv.pdf");
-
-			if (error) {
-				console.error("Error downloading file:", error.message);
-				return;
-			}
-
-			const url = window.URL.createObjectURL(data);
+			const pdfUrl = "/aleksandar_lazic_cv.pdf";
 
 			const a = document.createElement("a");
-			a.href = url;
+			a.href = pdfUrl;
 			a.download = "Aleksandar Lazic CV.pdf";
 			document.body.appendChild(a);
 			a.click();
 
-			window.URL.revokeObjectURL(url);
 			document.body.removeChild(a);
 		} catch (error) {
-			console.log(error);
+			console.error("Error downloading the PDF:", error);
 		}
 	};
 
