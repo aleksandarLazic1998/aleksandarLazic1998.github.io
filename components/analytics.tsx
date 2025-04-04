@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import ReactGA from "react-ga";
 
-const Analytics = () => {
+const GoogleAnalytics = () => {
 	useEffect(() => {
 		ReactGA.initialize(process.env.NEXT_PUBLIC_ANALYTICS_ID!);
 		ReactGA.pageview(window.location.pathname + window.location.search);
@@ -11,4 +11,4 @@ const Analytics = () => {
 	return null;
 };
 
-export default Analytics;
+export default GoogleAnalytics;
