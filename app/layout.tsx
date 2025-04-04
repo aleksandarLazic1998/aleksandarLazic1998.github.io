@@ -6,6 +6,7 @@ import "./globals.css";
 import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Analytics from "@/components/analytics";
+import ClarityAnalytics from "@/components/clarity";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
 					{children}
 					<SpeedInsights />
 					<Analytics />
+					<ClarityAnalytics />
 				</ThemeProvider>
 			</body>
 		</html>
