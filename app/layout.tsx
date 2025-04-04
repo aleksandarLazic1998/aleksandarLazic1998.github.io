@@ -5,7 +5,7 @@ import { metaSetting } from "@/const/meta.const";
 import "./globals.css";
 import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+import Analytics from "@/components/analytics";
 
 const inter = Inter({
 	subsets: ["latin"],
