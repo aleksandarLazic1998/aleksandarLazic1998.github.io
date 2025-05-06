@@ -90,8 +90,8 @@ export function About() {
 						</p>
 						<p className="text-gray-300 mb-8" tabIndex={0}>
 							Currently, I'm focused on expanding my knowledge in Cloud
-							Practitioner and Solution Architect AWS , with the goal of
-							building scalable, scalable and secure applications.
+							Practitioner and Solution Architect AWS, with the goal of building
+							scalable and secure applications.
 						</p>
 
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
