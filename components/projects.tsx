@@ -36,6 +36,7 @@ import tapSpotsLogo2 from "../public/tapspots-logo-2.png";
 import scfLogo1 from "../public/scf-logo-1.png";
 import scfLogo2 from "../public/scf-logo-2.png";
 import eosLogo1 from "../public/energy-icon.png";
+import bitcnLogo1 from "../public/8bitcn-logo-1.png";
 
 export function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
@@ -44,6 +45,26 @@ export function Projects() {
 
 	// Mock data for projects
 	const projects = [
+		{
+			id: 0,
+			title: "8bitcn-ui",
+			description:
+				"A set of retro-designed, accessible components and a code distribution platform. Open Source. Open Code.",
+			image: bitcnLogo1,
+			image2: bitcnLogo1,
+			category: ["all", "frontend", "open-source"],
+			technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn"],
+			role: "Open Source Contributor",
+			details: [
+				"Created Pagination component.",
+				"Created Toast notification component.",
+				"Created Breadcrumb component.",
+				"Created Toggle Group component.",
+				"Fix viewport issue for small screen.",
+			],
+			link: "https://www.8bitcn.com/",
+			github: "https://github.com/TheOrcDev/8bitcn-ui",
+		},
 		{
 			id: 1,
 			title: "Benefiti",
@@ -255,6 +276,7 @@ export function Projects() {
 		{ id: "all", name: "All Projects" },
 		{ id: "frontend", name: "Frontend" },
 		{ id: "backend", name: "Backend" },
+		{ id: "open-source", name: "Open Source" },
 	];
 
 	const filteredProjects = projects.filter((project) =>

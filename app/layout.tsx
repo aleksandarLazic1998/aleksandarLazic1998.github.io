@@ -7,7 +7,6 @@ import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ClarityAnalytics from "@/components/clarity";
 import GoogleAnalytics from "@/components/analytics";
-import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -40,7 +39,6 @@ export default function RootLayout({
 					<SpeedInsights />
 					<GoogleAnalytics />
 					<ClarityAnalytics />
-					<Analytics mode="production" />;
 				</ThemeProvider>
 			</body>
 		</html>
