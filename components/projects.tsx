@@ -388,7 +388,7 @@ export function Projects() {
 					</p>
 				</motion.div>
 
-				<div className="flex justify-center gap-4 mb-12">
+				<div className="flex flex-wrap justify-center gap-4 mb-12">
 					{filters.map((filter) => (
 						<Button
 							key={filter.id}
