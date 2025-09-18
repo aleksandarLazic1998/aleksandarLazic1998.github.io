@@ -133,7 +133,7 @@ const metaSetting: Metadata = {
     },
   },
   verification: {
-    google: "ZcYFCgNEgvIVgyT6wblhJBuT42OGCRZ2wyB1e0SQ9e8",
+    google: "8Ug7e-ClFOjEbAhHstcaAQcEqzbNQ6bdCfeC-EsQHE8",
   },
   category: "technology",
   classification: "Portfolio Website",
