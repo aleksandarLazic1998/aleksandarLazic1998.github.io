@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow private or admin areas
+Disallow: /private/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://aleksandarlazic1998.github.io/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
